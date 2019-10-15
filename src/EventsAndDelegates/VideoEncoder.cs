@@ -7,7 +7,7 @@ namespace EventsAndDelegates
     {
         /* We want to let someone know when the encoding has finished by sending them an email.
         Step 1. Define a delegate i.e. the agreement between the Publisher and Subscriber
-        Step 2. Define an event based on this delegate
+        Step 2. Define an event based on this delegate  ff
         Step 3. Raise/publish the event
         */
 
@@ -30,7 +30,8 @@ namespace EventsAndDelegates
 
         protected virtual void OnVideoEncoded()
         {
-            //Check if there are any subscribers to this event
+            // Check if there are any subscribers to this event
+            // Actually looking at the reference whcih is incremented in Program.cs with +=
             if (VideoEncoded != null)
                 VideoEncoded(this, EventArgs.Empty);
         }
